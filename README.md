@@ -33,6 +33,13 @@ Examples:
 * Want students to understand the impact of seatbelts? Provide them with some data to analyze that shows how death and injuries correlate with not wearing a seatbelt.
 * Want students to see how socioeconomic status affects educational achievement, crime, and health, provide them with data that illustrates it.
 
+# Twitter Sentiment Analysis
+Sentiment Analysis is the process of predicting whether a piece of text indicates a positive, negative or neutral sentiment on the topic.
 
 # Datasets
-[GitHub](http://github.com)
+[Twitter Sentiment:](https://www.kaggle.com/kazanova/sentiment140) This dataset contains 1,600,000 tweets extracted using the twitter API. 
+
+# APIs
+[Tweepy:](https://www.tweepy.org/) An easy-to-use Python library for accessing the Twitter API.
+
+[Twitter:](https://developer.twitter.com/en) Twitters developer website
