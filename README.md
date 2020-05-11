@@ -81,3 +81,6 @@ Main function to fetch tweets and parse them
             # print error (if any) 
             print("Error : " + str(e)) 
 
+# Useful Links
+[Twitter Sentiment Analysis using Python](https://www.geeksforgeeks.org/twitter-sentiment-analysis-using-python/)
+[Twitter Sentiment Analysis using NLTK, Python](https://towardsdatascience.com/twitter-sentiment-analysis-classification-using-nltk-python-fa912578614c)
