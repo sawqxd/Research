@@ -43,3 +43,41 @@ Sentiment Analysis is the process of predicting whether a piece of text indicate
 [Tweepy:](https://www.tweepy.org/) An easy-to-use Python library for accessing the Twitter API.
 
 [Twitter:](https://developer.twitter.com/en) Twitters developer website
+
+# Sample Code
+Main function to fetch tweets and parse them
+
+    def get_tweets(self, query, count = 10): 
+      
+        # empty list to store parsed tweets 
+        tweets = [] 
+  
+        try: 
+            # call twitter api to fetch tweets 
+            fetched_tweets = self.api.search(q = query, count = count) 
+  
+            # parsing tweets one by one 
+            for tweet in fetched_tweets: 
+                # empty dictionary to store required params of a tweet 
+                parsed_tweet = {} 
+  
+                # saving text of tweet 
+                parsed_tweet['text'] = tweet.text 
+                # saving sentiment of tweet 
+                parsed_tweet['sentiment'] = self.get_tweet_sentiment(tweet.text) 
+  
+                # appending parsed tweet to tweets list 
+                if tweet.retweet_count > 0: 
+                    # if tweet has retweets, ensure that it is appended only once 
+                    if parsed_tweet not in tweets: 
+                        tweets.append(parsed_tweet) 
+                else: 
+                    tweets.append(parsed_tweet) 
+  
+            # return parsed tweets 
+            return tweets 
+  
+        except tweepy.TweepError as e: 
+            # print error (if any) 
+            print("Error : " + str(e)) 
+
